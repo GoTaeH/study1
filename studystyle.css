@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
+
+header { width: 100%; height: 15%; background-color: rgb(227, 242, 255); display: flex; justify-content: center; align-items: center; }
+nav ul { width: 12%; list-style-type: none; margin: 0; padding: 0; background-color: rgb(247, 251, 255); float: left; }
+nav ul li a { display: block; text-decoration: none; padding: 20px; font-weight: bold; font-size: 14px; font-family: 'IBM Plex Sans KR', sans-serif; }
+nav ul li a:hover { color: rgb(9, 65, 9); background-color: rgb(161, 240, 243);}
+section { padding-left: 10px; width: 85%; min-height: 100%; float: left; padding-bottom: 150px; overflow: auto; font-family: 'Noto Sans KR', sans-serif; }
+div ul, ol { padding-left: 0; list-style-position: inside;}
+footer { width: 100%; height: 190px; background-color: rgb(226, 226, 226); clear: both; 
+    font-size: 11px; font-family: 'Noto Sans KR', sans-serif; }

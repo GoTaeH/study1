@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>프로그래밍 기초 2주차</title>
+        <link href="studystyle.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <header><h2>2주차 과제 (1)</h2></header>
+        <nav><ul>
+            <li><a href="#premise">On-premise와 Off-premise</a>
+            <li><a href="#idc">IDC</a>
+            <li><a href="#iaas">IaaS</a>
+            <li><a href="#paas">PaaS</a>
+            <li><a href="#saas">SaaS</a>
+            <li><a href="#rmrf">rm -rf와 위험성</a>
+            <li><a href="#grep">grep</a>
+            <li><a href="#file">파일 사용자와 그룹</a>
+            <li><a href="#netstat">netstat</a>
+            <li><a href="#ufw">ufw</a>
+        </ul></nav>
+        <section>
+            <div id="premise">
+                <h3><strong>On-premise와 Off-premise</strong></h3>
+                <b><ins>On-premise</ins></b><br>
+                <p>: On-premise(온프레미스)는 조직이 자체적으로 데이터 센터나 서버 룸과 같은 물리적인 장소에 IT 인프라를 보유하고 
+                    운영하는 것을 의미한다. 이는 조직의 직접적인 관리와 통제를 허용하고, 보안, 네트워킹, 스토리지 및 소프트웨어 등 모든 측면에서 
+                    완전한 제어를 제공할 수 있다. 조직이 민감한 데이터를 처리하거나 규정 준수 요구사항이 높은 산업에서 주로 사용된다. <br>
+                    On-premise는 보안 및 통제 측면에서 더 많은 제어를 제공하지만 초기 투자 및 유지 보수 비용이 높을 수 있다. 
+                </p>
+                <b><ins>Off-premise</ins></b><br>
+                <p>: Off-premise(오프프레미스)는 클라우드 서비스 제공 업체나 외부 데이터 센터와 같은 외부 위치에서 IT 인프라를 구축하고 
+                    운영하는 것을 의미한다. 이는 조직이 자체 데이터 센터를 구축하거나 유지 관리하는 복잡성을 피하면서 필요한 IT 리소스를 이용할 수 있도록 한다. 
+                    또한 인프라, 플랫폼 또는 소프트웨어 서비스를 필요에 따라 요금을 지불하고 사용할 수 있는 유연성을 제공한다. <br>
+                    Off-premise는 유연성과 확장성을 제공하지만 데이터 보안과 규정 준수 문제에 대한 우려가 있을 수 있다. 
+                </p>
+            </div><hr>
+            <div id="idc">
+                <h3><strong>IDC</strong></h3>
+                <p>: IDC은 2가지 의미가 있다. <br>
+                    인터넷 데이터 센터(Internet Data Center)는 인터넷 연결의 핵심이 되는 서버를 한 데 모아 집중시킬 필요가 있을 때 설립하는 
+                    시설을 의미한다. 네트워크 기반의 컴퓨팅 환경을 제공하기 위해 설계된 시설인 인터넷 데이터 센터는 고도로 안정적인 인프라를 구축하여 
+                    데이터의 저장, 처리, 관리를 수행한다. 주로 기업이나 조직의 IT 인프라 요구사항을 충족시키기 위해 사용된다. <br>
+                    국제 데이터 기업(International Data Corporation)은 국제적인 IT 시장 조사 기업이다. 정보 기술, 통신 및 소비자 기술 시장에 대한 시장 조사, 
+                    예측, 컨설팅 등을 제공한다. 기업들은 IDC의 조사 보고서와 인사이트를 활용하여 시장 동향, 기술 채택, 경쟁 분석, 성장 전망 등을 파악하고 결정을 내릴 수 있다. 
+                </p>
+            </div><hr>
+            <div id="iaas">
+                <h3><strong>IaaS</strong></h3>
+                <p>: IaaS(Infrastructure as a Service:서비스형 인프라)는 클라우드 컴퓨팅 서비스의 한 종류로, 기본적인 컴퓨팅, 네트워크, 스토리지 리소스를 온디맨드와 사용량 기준 지불 
+                    방식으로 인터넷을 통해 사용자에게 제공된다. 사용자가 서버, 스토리지, 네트워크 및 기타 기본적인 IT 인프라 요소를 필요한 만큼 확장/축소할 수 있게 한다. 
+                </p>
+                <details><summary>IaaS 장점</summary>
+                <ul>
+                    <li>사용량 기준 지불 : 초기에 자본 투자가 필요하지 않고, 실제 사용량에 대해서만 비용을 지불한다.
+                    <li>속도 : 사용자가 작은 용량 또는 대용량 리소스를 분 단위로 프로비저닝하면서 새로운 아이디어를 신속하게 테스트하거나 검증된 아이디어를 빨리 확장해보는 것이 가능하다.
+                    <li>가용성 : 멀티존 영역 등을 통해 클라우드 애플리케이션의 가용성 및 복원력을 기존 접근 방식을 능가하는 수준으로 강화할 수 있다. 
+                    <li>확장성 : 용량이 거의 무제한적이며, 리소스를 자동 또는 관리 감독하면서 확장하는 것이 가능하다. 
+                    <li>대기 시간과 성능 : 대부분의 제공업체가 광범위한 지리적 거점을 두고 있어 사용자와 가까운 곳에서 애플리케이션과 서비스를 실행하기 용이하다. 즉, 대기 시간이 짧아지고 성능이 향상된다.
+                </ul></details>
+            </div><hr>
+            <div id="paas">
+                <h3><strong>PaaS</strong></h3>
+                <p>: PaaS(Platform as a Service)는 클라우드 컴퓨팅 서비스의 한 종류로, 애플리케이션을 구축, 실행 및 관리하는 데 필요한 플랫폼을 제공하는 서비스이다. 
+                    개발자가 애플리케이션 코드를 작성하고 실행 환경, 데이터베이스, 웹 서버 등의 기술적인 측면을 고려하지 않고도 애플리케이션을 배포할 수 있게 한다. 
+                    IaaS보다 더 추상화된 레벨에서 작동하며 이를 통해 개발 생산성을 향상하고 비용을 절감할 수 있다. 
+                </p>
+                <details><summary>PaaS 장점</summary>
+                    <ul>
+                        <li>출시 시간 단축 : 애플리케이션 개발 플랫폼의 빌드와 유지보수에 사용되는 하드웨어와 소프트웨어를 구입하여 설치할 필요가 없다. PaaS를 활용하면 즉시 리소스 프로비저닝과 개발을 시작할 수 있다.
+                        <li>비용 절감 : 애플리케이션 플랫폼을 직접 구축하고 확장할 경우 부담해야하는 설비 투자 지출이 없어 비용이 절감된다. 또, 소프트웨어 라이센스 비용을 줄이거나 없앨 수도 있고, 관리 비용을 절감할 수 있다.
+                        <li>유연한 작업 : 공유 소프트웨어 개발 환경을 제공하여 인터넷에 연결되어 있으면 어디서나 필요한 모든 도구에 액세스할 수 있다.
+                        <li>다양한 리소스 : 운영체제, 미들웨어, 데이터베이스, 개발 도구 등과 관련하여 대부분 조직에서 현실적, 경제적으로 감당할 만한 수준으로 직접 운영할 때보다 훨씬 더 다양한 선택권이 보장된다.
+                    </ul>
+                </details>
+            </div><hr>
+            <div id="saas">
+                <h3><strong>SaaS</strong></h3>
+                <p>: SaaS(Software as a Service)는 클라우드 컴퓨팅 서비스의 한 종류로, 인터넷을 통해 소프트웨어를 제공하고, 사용자는 웹 브라우저나 모바일 앱을 통해 
+                    해당 소프트웨어에 접근하고 사용할 수 있는 형태이다. 이는 구매 대신 구독 방식으로 이용할 수 있다. SaaS는 가장 일반적인 
+                    퍼블릭 클라우드 컴퓨팅 서비스이자 지배적인 소프트웨어 제공 모델이다. 
+                </p>
+                <details><summary>SaaS 장점</summary>
+                    <ul>
+                        <li>선행 투자비용 절감 : 추가 하드웨어 및 미들웨어의 필요성을 없애고, 설치 및 구현 비용을 절감한다.
+                        <li>지속 발생비용 예측 : 소프트웨어와 하드웨어를 관리, 패치 및 업데이트하는 데 드는 예측 불가능한 비용을 없애 자본 지출을 운영 비용으로 전환한다.
+                        <li>신속한 배포 : 최신 혁신 기술 및 업데이트 활성화와 사용으로 기존대로라면 몇 달이 걸릴 과정을 몇 시간 만에 준비 및 실행이 가능하다.
+                        <li>온디맨드 확장성 : 증가하는 데이터 또는 트랜잭션 요구 충족을 위해 언제든 즉시 확장이 가능하다. 운영 장애를 최소화하고, 동시에 서비스 수준까지 유지한다.
+                    </ul>
+                </details><br>
+            </div><hr>
+            <div id="rmrf">
+                <h3><strong>rm -rf와 위험성</strong></h3>
+                <p>: rm -rf는 리눅스와 유닉스 기반 시스템에서 사용되는 명령어로, 디렉토리와 그 안에 있는 모든 파일을 강제로 삭제하는 명령어이다. <br>
+                    rm -rf는 실수로 중요한 데이터를 삭제해 복구하기 어렵거나 불가능할 수 있고, 시스템 파일이나 필수적인 실행 파일을 삭제해 정상적인 동작에 영향을 줄 수도 있다. 
+                    또한 악의적인 목적으로 사용하면 시스템에 큰 피해를 입힐 수 있다는 위험성이 있다.
+                </p>
+                <details><summary>rm -rf 사용 시 주의사항</summary>
+                <ul>
+                    <li>확인 : 실행 전 신중하게 확인하고, 삭제 대상이 맞는지 다시 확인해야 한다.
+                    <li>백업 유지 : 중요한 파일이나 디렉토리를 삭제하기 전에 백업을 유지하여 영구적인 데이터 손실을 방지해야 한다.
+                    <li>권한 확인 : 실행 전 삭제 대상 파일이나 디렉토리에 대한 쓰기 권한이 있는지 확인해야 한다.
+                    <li>별도의 옵션 사용 : rm -rf 대신 -i 옵션을 사용하여 삭제 전에 확인 메시지를 표시하거나, -v 옵션을 사용하여 삭제 과정을 상세히 표시할 수 있다.
+                </ul>
+                </details><br>
+            </div><hr>
+            <div id="grep">
+                <h3><strong>grep</strong></h3>
+                <p>: grep(Global Regular Expression Print)은 특정 파일에서 지정한 문자열이나 정규표현식을 포함한 행을 출력해주는 
+                    명령어이다. 리눅스에서 grep은 tail이나 ls 등 다양한 명령어와 조합하여 응용되기 때문에 능숙하게 사용할 줄 알아야 하는 기본 명령어이다.
+                </p><br>
+                <b><ins>grep 사용법</ins></b><br>
+                <p> grep [option] [pattern] [filename]</p>
+                <details><summary>grep 옵션</summary>
+                <ul><li>-c : 일치하는 행의 수 출력
+                    <li>-i : 대소문자 구별 X
+                    <li>-v : 일치하지 않는 행만 출력
+                    <li>-n : 포함된 행의 번호를 함께 출력
+                    <li>-l : 패턴이 포함된 파일의 이름 출력
+                    <li>-w : 단어와 일치하는 행만 출력
+                    <li>-x : 라인과 일치하는 행만 출력
+                    <li>-r : 하위 디렉토리를 포함한 모든 파일에서 검색
+                    <li>-m 숫자 : 최대로 표시될 수 있는 결과를 제한
+                    <li>-E : 찾을 패턴을 정규 표현식으로 지정
+                    <li>-F : 찾을 패턴을 문자열로 지정
+                </ul>
+                </details>
+            </div><hr>
+            <div id="file">
+                <h3><strong>파일 사용자와 그룹</strong></h3>
+                <p>: 리눅스와 유닉스 운영체제에서는 각 파일과 디렉토리에 대해 소유자와 그룹을 지정할 수 있다. <br>
+                    파일 사용자(User)는 파일을 소유하고 관리하는 개인 또는 시스템 계정을 의미한다. 사용자 계정에 의해 식별되며, 파일에 대한 읽기(r), 쓰기(w), 
+                    실행(x) 등의 권한을 가진다. 파일 소유자는 파일을 만든 사용자로 지정되며, chown 명령어를 사용하여 변경할 수 있다. <br>
+                    파일 그룹(Group)은 파일을 공유하는 사용자들의 그룹을 의미한다. 사용자 계정 그룹에 의해 식별되며, 파일에 대한 동일한 접근 권한을 가지는 그룹 
+                    멤버들에게 적용된다. 파일 소유자의 기본 그룹으로 설정되며, chgrp 명령어를 사용하여 변경할 수 있다.
+                </p>
+                <details><summary>파일 사용자와 그룹 확인 방법</summary>
+                <p>: ls -l 명령어를 사용하여 확인한다. chmod 명령어를 사용하여 파일의 권한을 변경할 수 있다. <br>
+                    가장 앞에 있는 문자는 디렉토리(d)/파일(-)을 나타내고, 그 다음 문자열들은 3개씩 소유자의 권한, 소유그룹의 권한, 소유자/그룹 이외의 권한을 나타낸다.
+                </p>
+                </details>
+            </div><hr>
+            <div id="netstat">
+                <h3><strong>netstat</strong></h3>
+                <p>: netstat(Network Statistics)은 리눅스와 유닉스 기반 운영체제에서 네트워크 연결, 라우팅 테이블, 네트워크 인터페이스, 소켓 상태 등과 
+                    관련된 네트워크 정보를 확인하는 명령어이다. 네트워크 관리 및 문제 해결에 유용한 도구로 네트워크 연결 상태를 모니터링하고 진단하는 데 사용된다.
+                </p>
+                <details><summary>netstat 옵션(netstat --help : 옵션 및 사용법 확인)</summary>
+                <ul><li>-a : 모든 소켓 및 리스닝 상태 표시
+                    <li>-t : TCP 프로토콜에 대한 정보만 표시
+                    <li>-u : UDP 프로토콜에 대한 정보만 표시
+                    <li>-n : 주소와 포트번호를 숫자로 표시
+                    <li>-p : 소켓과 연결된 프로세스의 ID 표시
+                    <li>-s : 프로토콜별 네트워크 통계 정보 표시
+                    <li>-r : 라우팅 테이블 정보 표시
+                </ul></details>
+            </div><hr>
+            <div id="ufw">
+                <h3><strong>ufw</strong></h3>
+                <p>: ufw(Uncomplicated Firewall)는 리눅스 시스템에서 사용되는 간단하고 사용하기 쉬운 방화벽 관리 도구이다. 
+                    iptables의 간편한 인터페이스를 제공하여 시스템 관리자가 쉽게 방화벽 규칙을 설정하고 관리할 수 있도록 도와준다. 
+                </p>
+                <details><summary>ufw 관련 명령어 몇 가지</summary>
+                <ul><li>sudo apt-get install ufw : ufw 설치
+                    <li>sudo ufw enable(disable) : ufw 활성화(비활성화)
+                    <li>sudo ufw status verbose : ufw 상태 확인
+                    <li>sudo ufw default deny incoming : 들어오는 통신 차단
+                    <li>sudo ufw default allow outgoing : 나가는 통신 허용
+                    <li>sudo ufw allow 80(/tcp, /udp) : 80포트 허용 (80포트 TCP 허용, 80포트 UDP 허용)
+                </ul>
+                </details><br>
+        </section>
+        <footer><h4>참고</h4>
+            <ul><li>https://www.ibm.com/kr-ko/topics/iaas
+                <li>https://www.ibm.com/kr-ko/topics/paas
+                <li>https://www.oracle.com/kr/applications/what-is-saas/
+                <li>https://coding-factory.tistory.com/802
+                <li>https://www.manualfactory.net/13594
+                <li>https://blog.itcode.dev/posts/2021/09/04/firewall-with-ufw
+                <li>ChatGPT
+                <li><a href="1week1.html">1주차 첫번째 페이지로 이동</a>
+            </ul>
+        </footer>
+    </body>
+</html>

@@ -1,12 +1,70 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
-header { width: 100%; height: 15%; background-color: rgb(227, 242, 255); display: flex; justify-content: center; align-items: center; }
-nav ul { width: 12%; list-style-type: none; margin: 0; padding: 0; background-color: rgb(247, 251, 255); float: left; }
-nav ul li a { display: block; text-decoration: none; padding: 20px; font-weight: bold; font-size: 14px; font-family: 'IBM Plex Sans KR', sans-serif; }
-nav ul li a:hover { color: rgb(9, 65, 9); background-color: rgb(161, 240, 243);}
-section { padding-left: 10px; width: 85%; min-height: 100%; float: left; padding-bottom: 150px; overflow: auto; font-family: 'Noto Sans KR', sans-serif; }
-div ul, ol { padding-left: 0; list-style-position: inside;}
-footer { width: 100%; height: 190px; background-color: rgb(226, 226, 226); clear: both; 
-    font-size: 11px; font-family: 'Noto Sans KR', sans-serif; }
+header { 
+    width: 100%; height: 180px;
+    background-color: rgb(200, 229, 255); 
+    display: flex; justify-content: center; 
+    align-items: center;
+    left: 0; top: 0;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-size: 25px;
+}
+.navbar {
+    display: flex;
+    width: 100%; height: 60px;
+    margin: 0; padding: 0;
+    justify-content: center;
+    background-color:rgba(167, 228, 246, 0.328);
+    list-style-type: none;
+}
+.menu {
+    list-style: none; display: flex;
+    margin: 0; padding: 0;
+    cursor: pointer; text-align: center;
+}
+.nav-item a {
+    text-decoration: none;
+    color:rgb(25, 165, 212);
+    font-size: 20px;
+    padding: 0; margin: 20px;
+    font-family: 'Lobster', cursive;
+    display: block;
+}
+.nav-item a:hover {
+    color: rgb(26, 17, 34);
+}
+.sideul { 
+    width: 12%; list-style-type: none; 
+    margin: 0; padding: 0; 
+    background-color: rgb(247, 251, 255); 
+    float: left; 
+}
+.side-item a { 
+    display: block; text-decoration: none; 
+    padding: 20px; font-weight: bold; 
+    color: rgb(58, 19, 95);
+    font-size: 14px; font-family: 'IBM Plex Sans KR', sans-serif; 
+}
+.side-item a:hover { 
+    color: rgb(9, 65, 9); 
+    background-color: rgb(161, 240, 243);
+}
+section { 
+    padding-left: 10px; width: 85%; 
+    min-height: 100%; float: left; 
+    padding-bottom: 150px; overflow: auto; 
+    font-family: 'Noto Sans KR', sans-serif; 
+}
+div ul, ol { 
+    padding-left: 0; 
+    list-style-position: inside;
+}
+footer { 
+    width: 100%; height: 190px; background-color: rgb(226, 226, 226); 
+    clear: both; font-size: 11px; 
+    font-family: 'Noto Sans KR', sans-serif; 
+}

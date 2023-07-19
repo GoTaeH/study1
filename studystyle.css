@@ -12,6 +12,7 @@ header {
     left: 0; top: 0;
     font-family: 'IBM Plex Sans KR', sans-serif;
     font-size: 25px;
+    background: url(banner.jpg) center top repeat-x;
 }
 .navbar {
     display: flex;

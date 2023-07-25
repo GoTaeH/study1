@@ -1,4 +1,35 @@
 .container {
     display: grid;
-    grid-template-columns: 1.5fr 0.5fr 0.5fr;
+    grid-template-columns: 0.3fr 1.5fr 0.3fr;
+    gap: 20px;
+    width: 100%;
+}
+.category {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    text-align: center;
+    height: 30px; width: 100%;
+}
+.info {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: stretch;
+    align-content: stretch;
+    grid-auto-rows: minmax(100px, auto);
+    gap: 30px;
+}
+.page {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20%, auto));
+    grid-template-columns: 30px 30px 30px 30px 30px 30px;
+    gap: 10px;
+    justify-content: stretch;
+    text-align: center;
+}
+/*page 번호 중앙 정렬 할 것*/
+@media(min-width:650px) {
+    .info{
+        grid-template-columns: 1fr 1fr;
+    }
 }

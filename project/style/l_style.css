@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbit&display=swap');
+
 * {
     box-sizing: border-box;
 }
@@ -12,7 +14,6 @@ body {
 }
 
 .login {
-    width: 400px;
     border: 0;
     border-radius: 10px;
     background-color: rgb(248, 252, 255);
@@ -20,8 +21,15 @@ body {
     margin: 0 auto;
 }
 
+.login_logo {
+    max-width: 100%;
+    margin: auto;
+    display: block;
+}
+
 .text-field {
     font-size: 15px;
+    font-family: 'Orbit', sans-serif;
     margin-bottom: 20px;
     border: none;
     border-radius: 15px;
@@ -32,6 +40,7 @@ body {
 .submit-btn {
     color: darkslateblue;
     font-size: 15px;
+    font-family: 'Orbit', sans-serif;
     background-color: aliceblue;
     margin-bottom: 35px;
     padding: 10px;
@@ -45,5 +54,6 @@ body {
 }
 .membership a {
     font-size: 14px;
+    font-family: 'Orbit', sans-serif;
     color: rgb(18, 18, 81);
 }

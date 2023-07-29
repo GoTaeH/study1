@@ -12,6 +12,12 @@ app.get('/', (req, res) => {
 app.get('/header', (req, res) => {
     res.sendFile(__dirname + '/header.html');
 });
+app.get('/style/:name', (req, res) => {
+    res.sendFile(__dirname + '/style/' + req.params.name);
+});
+app.get('/image/:name', (req, res) => {
+    res.sendFile(__dirname + '/image/' + req.params.name);
+});
 
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`);

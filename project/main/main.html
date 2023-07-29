@@ -3,10 +3,10 @@
     <head>
         <meta charset="utf-8">
         <title>PC 게임 인포</title>
-        <link href="m_style.css" type="text/css" rel="stylesheet">
+        <link href="../style/mainstyle.css" rel="stylesheet">
     </head>
     <body>
-        <div id="header_container"><a href="http://goth/header"></a></div>
+        <div id="header_container"></div>
         <nav class="navbar">
             <div class="category">
                 <div class="cat_item" id="act">액션</div>
@@ -43,36 +43,15 @@
             </div>
         </footer>
 
-        <style>
-            .category {
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-                gap: 10px;
-                text-align: center;
-                height: 30px; width: 100%;
-            }
-            .info {
-                display: grid;
-                grid-template-columns: 1fr;
-                justify-content: stretch;
-                align-content: stretch;
-                grid-auto-rows: minmax(100px, auto);
-                gap: 30px;
-            }
-            .page {
-                display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(20%, auto));
-                grid-template-columns: 30px 30px 30px 30px 30px 30px;
-                gap: 10px;
-                justify-content: stretch;
-                text-align: center;
-            }
-            /*page 번호 중앙 정렬 할 것*/
-            @media(min-width:650px) {
-                .info{
-                    grid-template-columns: 1fr 1fr;
+        <script>
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if(this.readyState == 4 && this.status == 200) {
+                    document.getElementById("header_container").innerHTML = this.responseText;
                 }
-            }
-        </style>
+            };
+            xhttp.open("GET", "/header", true);
+            xhttp.send();
+        </script>
     </body>
 </html>

@@ -9,6 +9,9 @@ app.set('views', path.join(__dirname));
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/main/main.html');
 });
+app.get('/header', (req, res) => {
+    res.sendFile(__dirname + '/header.html');
+});
 
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`);

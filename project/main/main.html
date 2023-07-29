@@ -6,13 +6,7 @@
         <link href="m_style.css" type="text/css" rel="stylesheet">
     </head>
     <body>
-        <header>
-            <div class="container">
-                <div class="content"><button id="bookmark_btn">즐겨찾기</button></div>
-                <div class="content"><img class="logo_img" src="white_logoM.png" alt="pc게임인포"></div>
-                <div class="content"><button id="login_btn">로그인</button></div>
-            </div>    
-        </header>
+        <div id="header_container"><a href="http://goth/header"></a></div>
         <nav class="navbar">
             <div class="category">
                 <div class="cat_item" id="act">액션</div>
@@ -48,5 +42,37 @@
                 <div class="num"><button id="num_btn">&#62;</button></div>
             </div>
         </footer>
+
+        <style>
+            .category {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+                gap: 10px;
+                text-align: center;
+                height: 30px; width: 100%;
+            }
+            .info {
+                display: grid;
+                grid-template-columns: 1fr;
+                justify-content: stretch;
+                align-content: stretch;
+                grid-auto-rows: minmax(100px, auto);
+                gap: 30px;
+            }
+            .page {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(20%, auto));
+                grid-template-columns: 30px 30px 30px 30px 30px 30px;
+                gap: 10px;
+                justify-content: stretch;
+                text-align: center;
+            }
+            /*page 번호 중앙 정렬 할 것*/
+            @media(min-width:650px) {
+                .info{
+                    grid-template-columns: 1fr 1fr;
+                }
+            }
+        </style>
     </body>
 </html>

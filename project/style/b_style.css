@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbit&display=swap');
+
+html {
+    background-color: rgb(99, 105, 124);
+}
+
+.bookmark {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: stretch;
+    align-content: stretch;
+    grid-auto-rows: minmax(100px, auto);
+    gap: 30px;
+    font-family: 'Orbit', sans-serif;
+}
+@media(min-width:650px) {
+    .bookmark {
+        grid-template-columns: 1fr 1fr;
+    }
+}

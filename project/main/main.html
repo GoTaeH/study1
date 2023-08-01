@@ -42,16 +42,6 @@
                 <div class="num"><button id="num_btn">&#62;</button></div>
             </div>
         </footer>
-
-        <script>
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
-                if(this.readyState == 4 && this.status == 200) {
-                    document.getElementById("header_container").innerHTML = this.responseText;
-                }
-            };
-            xhttp.open("GET", "/header", true);
-            xhttp.send();
-        </script>
+        <script src="../js/main_script.js"></script>
     </body>
 </html>

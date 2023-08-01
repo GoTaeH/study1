@@ -2,33 +2,23 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>즐겨찾기</title>
+        <title>즐겨찾기 목록</title>
         <link href="../style/b_style.css" type="text/css" rel="stylesheet">
     </head>
     <body>
         <div id="header_container"></div>
-        <div class="bookmark">
-            <div class="game">즐찾1</div>
-            <div class="game">즐찾2</div>
-            <div class="game">즐찾3</div>
-            <div class="game">즐찾4</div>
-            <div class="game">즐찾5</div>
-            <div class="game">즐찾6</div>
-            <div class="game">즐찾7</div>
-            <div class="game">즐찾8</div>
-            <div class="game">즐찾9</div>
-            <div class="game">즐찾10</div>
+        <div class="bookmark_games">
+            <div class="top">게임 ID</div>
+            <div class="top">게임 이름</div>
+            <div class="top">가격</div>
+            <div class="top">즐겨찾기</div>
+
+            <div class="list"><a href="#">게임 번호</a></div>
+            <div class="list"><a href="#">게임 이름</a></div>
+            <div class="list"><a href="#">가격</a></div>
+            <div class="list"><div class="star-btn" onclick="toggleFavorite(this)">
+                <img class="star" src="../image/yellowstar.png" alt="Star"></div>
         </div>
-        <!-- <img class="logo_img" src="../image/white_logoM.png"></div> -->
-        <script>
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
-                if(this.readyState == 4 && this.status == 200) {
-                    document.getElementById("header_container").innerHTML = this.responseText;
-                }
-            };
-            xhttp.open("GET", "/header", true);
-            xhttp.send();
-        </script>
+        <script src="../js/b_script.js"></script>
     </body>
 </html>

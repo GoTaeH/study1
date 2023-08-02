@@ -3,25 +3,23 @@ const app = express();
 const port = 3000;
 
 const path = require('path');
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname));
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/main/main.html');
+    res.sendFile(__dirname + '/html/main.html');
 });
 app.get('/header', (req, res) => {
-    res.sendFile(__dirname + '/header.html');
+    res.sendFile(__dirname + '/html/header.html');
 });
 
 app.get('/login', (req, res) => {
-    res.sendFile(__dirname + '/login/login.html');
+    res.sendFile(__dirname + '/html/login.html');
 });
 app.get('/login/membership', (req, res) => {
-    res.sendFile(__dirname + '/login/membership.html');
+    res.sendFile(__dirname + '/html/membership.html');
 });
 
 app.get('/bookmark', (req, res) => {
-    res.sendFile(__dirname + '/bookmark/bookmark.html');
+    res.sendFile(__dirname + '/html/bookmark.html');
 });
 
 app.get('/style/:name', (req, res) => {

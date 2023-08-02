@@ -3,6 +3,15 @@ const app = express();
 const port = 3000;
 
 const path = require('path');
+const cors = require('cors');
+
+
+app.use(
+    cors({
+        origin: 'https://gogoth7.site',
+        credentials: true,
+    })
+);
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/html/main.html');
